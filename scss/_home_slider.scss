@@ -1,0 +1,545 @@
+/*========================================*/
+/*------------- [_Home_Slider] -----------*/
+/*========================================*/
+
+//Home Banner 01
+.home_banner_01 {
+	position: relative;
+	.home-carousel {
+		position: relative;
+		.slide-item {
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding: 120px 0px 220px 0px;
+			z-index: 1;
+			.image-layer {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+			}
+			.auto-container {
+				position: static;
+				max-width: 1320px;
+				padding: 0px 15px;
+				margin: 0 auto;
+			}
+		}
+		.content-box {
+			position: relative;
+			display: block;
+			z-index:5;
+			width: 100%;
+			.home-carousel-title {
+				position: relative;
+				display: block;
+				font-size: 72px;
+				line-height: 1.3;
+				margin-bottom: 30px;
+				opacity: 0;
+				@include transform(translateX(50px));
+				@include transition(all 1000ms ease);
+				@media screen and (max-width: 1024px){
+					font-size: 48px;
+				}
+			}
+			.home-carousel-text {
+				position: relative;
+				display: block;
+				margin-bottom: 40px;
+				font-size: 20px;
+				line-height: 36px;
+				opacity: 0;
+				@include transform(translateX(-50px));
+				@include transition(all 1300ms ease);
+			}
+			.btn-box {
+				position: relative;
+				opacity: 0;
+				@include transform(translateY(50px));
+				@include transition(all 1600ms ease);
+			}
+		}
+		.active {
+			.content-box {
+				.home-carousel-title {
+					opacity: 1;
+					@include transform(translateX(0));
+					-webkit-transition-delay: 1000ms;
+					-moz-transition-delay: 1000ms;
+					-ms-transition-delay: 1000ms;
+					-o-transition-delay: 1000ms;
+					transition-delay: 1000ms;
+				}
+				.home-carousel-text {
+					opacity: 1;
+					@include transform(translateX(0));
+					-webkit-transition-delay: 1300ms;
+					-moz-transition-delay: 1300ms;
+					-ms-transition-delay: 1300ms;
+					-o-transition-delay: 1300ms;
+					transition-delay: 1300ms;
+				}
+				.btn-box {
+					opacity: 1;
+					@include transform(translateY(0));
+					-webkit-transition-delay: 1600ms;
+					-moz-transition-delay: 1600ms;
+					-ms-transition-delay: 1600ms;
+					-o-transition-delay: 1600ms;
+					transition-delay: 1600ms;
+				}
+			}
+		}
+	}
+}
+
+//Home Banner 02
+.home_banner_02 {
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 425px){
+		max-height: 600px;
+	}
+	.home-carousel {
+		position: relative;
+		.slide-item {
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding: 150px 0px 160px 0px;
+			overflow: hidden;
+			@media screen and (max-width: 425px){
+				padding: 100px 0px 100px 0px;
+			}
+			background-color: #151130;
+			.home-bottom-shape {
+				position: absolute;
+				bottom: -25px;
+				z-index: 3;
+				opacity: 0.5;
+				left: 0;
+				right: 0;
+				@media screen and (max-width: 1024px){
+					bottom: 0px;
+				}
+				@media screen and (max-width: 768px){
+					opacity: 0;
+				}
+			}
+			.shape {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+				opacity: 0.5;
+				&.shape-1 {
+					opacity: 0.08;
+				}
+				&.shape-2 {
+					opacity: 0.35;
+					z-index: 3;
+					animation-name: float-y-axis;
+					animation-iteration-count: infinite;
+					animation-duration: 4s;
+					bottom: -30px;
+					animation-timing-function: linear;
+					@media screen and (max-width: 425px){
+						display: none;
+					}
+					@media screen and (max-width: 768px){
+						opacity: 0.1;
+					}
+				}
+			}
+			.image-layer {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+				@include transform(scale(1));
+				@include transition(all 8000ms linear);
+				z-index: 0;
+			}
+			.auto-container {
+				position: static;
+				max-width: 1380px;
+				padding: 0px 15px;
+				margin: 0 auto;
+				.content-box {
+					position: relative;
+					display: block;
+					z-index:5;
+					width: 100%;
+					padding: 0 30px;
+					@media screen and (max-width: 425px){
+						padding: 0 15px;
+					}
+					.home-carousel-title {
+						position: relative;
+						display: block;
+						font-size: 68px;
+						line-height: 82px;
+						font-weight: 900;
+						margin-bottom: 30px;
+						opacity: 0;
+						max-width: 680px;
+						z-index: 11;
+						@include transform(translateY(100px));
+						@include transition(all 1000ms ease);
+						font-family: var(--primary-font1);
+						@media screen and (max-width: 768px){
+							font-size: 64px;
+							max-width: 100%;
+						}
+						@media screen and (max-width: 425px){
+							margin-bottom: 20px;
+							font-size: 48px;
+							line-height: 1.2;
+						}
+						@media screen and (max-width: 375px){
+							margin-bottom: 20px;
+							font-size: 42px;
+							line-height: 1.2;
+						}
+					}
+					.home-carousel-text {
+						position: relative;
+						display: block;
+						margin-bottom: 45px;
+						font-size: 20px;
+						line-height: 36px;
+						opacity: 0;
+						max-width: 420px;
+						z-index: 11;
+						@include transform(translateY(100px));
+						@include transition(all 1300ms ease);
+						@media screen and (max-width: 768px){
+							max-width: 100%;
+						}
+						@media screen and (max-width: 425px){
+							font-size: 17px;
+							line-height: 30px;
+						}
+						@media screen and (max-width: 375px){
+							font-size: 18px;
+							line-height: 30px;
+						}
+					}
+					.btn-box {
+						position: relative;
+						opacity: 0;
+						z-index: 11;
+						@include transform(translateY(100px));
+						@include transition(all 1300ms ease);
+					}
+				}
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 105%;
+				background: linear-gradient(90deg, #edeff9 30%, rgba(243, 246, 248, 0) 80%);
+				top: 0px;
+				right: 0px;
+				z-index: 2;
+				opacity: 0.85;
+			}
+			&::after {
+				@media screen and (max-width: 768px){
+					position: absolute;
+					content: '';
+					width: 100%;
+					height: 105%;
+					background: #fff;
+					top: 0px;
+					right: 0px;
+					z-index: 2;
+					opacity: 0.85;
+				}
+			}
+		}
+		.active {
+			.image-layer {
+				@include transform(scale(1.12));
+			}
+			.auto-container {
+				.content-box {
+					.home-carousel-title {
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1000ms;
+						-moz-transition-delay: 1000ms;
+						-ms-transition-delay: 1000ms;
+						-o-transition-delay: 1000ms;
+						transition-delay: 1000ms;
+					}
+					.home-carousel-text {
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1300ms;
+						-moz-transition-delay: 1300ms;
+						-ms-transition-delay: 1300ms;
+						-o-transition-delay: 1300ms;
+						transition-delay: 1300ms;
+					}
+					.btn-box{
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1600ms;
+						-moz-transition-delay: 1600ms;
+						-ms-transition-delay: 1600ms;
+						-o-transition-delay: 1600ms;
+						transition-delay: 1600ms;
+					}
+				}
+			}
+		}
+		.owl-nav {
+			button {
+				background: var(--primary-color2);
+			}
+		}
+	}
+}
+
+//Home Banner 02
+.home_banner_03 {
+	position: relative;
+	@media screen and (max-width: 425px){
+		max-height: 600px;
+	}
+	.home-carousel {
+		position: relative;
+		.slide-item {
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding: 200px 0px 160px 0px;
+			overflow: hidden;
+			@media screen and (max-width: 425px){
+				padding: 100px 0px 100px 0px;
+			}
+			background-color: #151130;
+			.home-bottom-shape {
+				position: absolute;
+				bottom: -25px;
+				z-index: 3;
+				opacity: 0.5;
+				left: 0;
+				right: 0;
+				@media screen and (max-width: 1024px){
+					bottom: 0px;
+				}
+				@media screen and (max-width: 768px){
+					opacity: 0;
+				}
+			}
+			.image-layer {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+				@include transform(scale(1));
+				@include transition(all 8000ms linear);
+				z-index: 0;
+			}
+			.auto-container {
+				position: static;
+				max-width: 1380px;
+				padding: 0px 15px;
+				margin: 0 auto;
+				.content-box {
+					position: relative;
+					display: block;
+					z-index:5;
+					width: 100%;
+					padding: 0 30px;
+					@media screen and (max-width: 425px){
+						padding: 0 15px;
+					}
+					@media screen and (max-width: 768px){
+						text-align: center;
+					}
+					.home-carousel-title {
+						position: relative;
+						display: block;
+						font-size: 68px;
+						line-height: 82px;
+						font-weight: 900;
+						margin-bottom: 30px;
+						opacity: 0;
+						max-width: 680px;
+						z-index: 11;
+						color: #fff;
+						@include transform(translateY(100px));
+						@include transition(all 1000ms ease);
+						font-family: var(--primary-font1);
+						@media screen and (max-width: 768px){
+							font-size: 64px;
+							max-width: 100%;
+						}
+						@media screen and (max-width: 425px){
+							margin-bottom: 20px;
+							font-size: 48px;
+							line-height: 1.2;
+						}
+						@media screen and (max-width: 375px){
+							margin-bottom: 20px;
+							font-size: 42px;
+							line-height: 1.2;
+						}
+					}
+					.home-carousel-text {
+						position: relative;
+						display: block;
+						margin-bottom: 45px;
+						font-size: 20px;
+						line-height: 36px;
+						opacity: 0;
+						max-width: 420px;
+						z-index: 11;
+						color: #fff;
+						@include transform(translateY(100px));
+						@include transition(all 1300ms ease);
+						@media screen and (max-width: 768px){
+							max-width: 100%;
+						}
+						@media screen and (max-width: 425px){
+							font-size: 17px;
+							line-height: 30px;
+						}
+						@media screen and (max-width: 375px){
+							font-size: 18px;
+							line-height: 30px;
+						}
+					}
+					.btn-box {
+						position: relative;
+						opacity: 0;
+						z-index: 11;
+						@include transform(translateY(100px));
+						@include transition(all 1300ms ease);
+					}
+				}
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 105%;
+				background: linear-gradient(70deg, #161f48 20%, rgba(18, 9, 5, 0.26) 60%);
+				top: 0px;
+				right: 0px;
+				z-index: 2;
+				opacity: 0.85;
+			}
+			&::after {
+				@media screen and (max-width: 768px){
+					position: absolute;
+					content: '';
+					width: 100%;
+					height: 105%;
+					background: #08284b;
+					top: 0px;
+					right: 0px;
+					z-index: 2;
+					opacity: 0.85;
+				}
+			}
+		}
+		.active {
+			.image-layer {
+				@include transform(scale(1.12));
+			}
+			.auto-container {
+				.content-box {
+					.home-carousel-title {
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1000ms;
+						-moz-transition-delay: 1000ms;
+						-ms-transition-delay: 1000ms;
+						-o-transition-delay: 1000ms;
+						transition-delay: 1000ms;
+					}
+					.home-carousel-text {
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1300ms;
+						-moz-transition-delay: 1300ms;
+						-ms-transition-delay: 1300ms;
+						-o-transition-delay: 1300ms;
+						transition-delay: 1300ms;
+					}
+					.btn-box{
+						opacity: 1;
+						-webkit-transform: translateY(0);
+						-moz-transform: translateY(0);
+						-ms-transform: translateY(0);
+						-o-transform: translateY(0);
+						transform: translateY(0);
+						-webkit-transition-delay: 1600ms;
+						-moz-transition-delay: 1600ms;
+						-ms-transition-delay: 1600ms;
+						-o-transition-delay: 1600ms;
+						transition-delay: 1600ms;
+					}
+				}
+			}
+		}
+		.owl-nav {
+			button {
+				background: var(--primary-color2);
+			}
+		}
+	}
+	&.bottom-long-gap {
+		.home-carousel {
+			.slide-item {
+				padding: 140px 0px 240px 0px;
+				@media screen and (max-width: 425px){
+					max-height: 600px;
+					padding: 100px 0px 100px 0px;
+				}
+			}
+		}
+	}
+}

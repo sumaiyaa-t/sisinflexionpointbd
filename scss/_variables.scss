@@ -1,0 +1,60 @@
+//======= Variables ========//
+
+$primary-color: #0162CA;
+$primary-color2: #07A4E6;
+$primary-color3: #33d687;
+$primary-color4: #FAB758;
+$secondary-color: #0A2046;
+$secondary-color2: #353666;
+@function hexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+}
+:root {
+	--primary-color: #0162CA;
+	--primary-color-rgb: #{hexToRGB($primary-color)};
+	--primary-color2: #07A4E6;
+	--primary-color2-rgb: #{hexToRGB($primary-color2)};
+	--primary-color3: #33d687;
+	--primary-color3-rgb: #{hexToRGB($primary-color3)};
+	--primary-color4: #FAB758;
+	--primary-color4-rgb: #{hexToRGB($primary-color4)};
+	--secondary-color: #003478;
+	--secondary-color-rgb: #{hexToRGB($secondary-color)};
+	--secondary-color2: #353666;
+	--secondary-color2-rgb: #{hexToRGB($secondary-color)};
+
+	--text-white: #ffffff;
+	--text-black: #303031;
+	--text-gray: #666666;
+	--text-blue: #447BDE;
+	--text-light-gray: #a7a8b4;
+	--text-silver: #f5f3f1;
+	--text-gray-light: #CCCCCC;
+	--text-dark-light: #808093;
+
+	--bg-white: #ffffff;
+	--bg-light-pink: #faf3f3;
+	--bg-silver: #F6F7FC;
+	--bg-silver-light: #F8F8F8;
+	--bg-silver-light2: #f0f1f7;
+	--bg-silver-deep: #ecdaee;
+	--bg-gray: #f7f7f7;
+	--bg-dark-color: #0B0C26;
+	--bg-blue-color: #571bcd;
+
+	--bg-gradient-color: linear-gradient(45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+	--bg-gradient-reverse-color: linear-gradient(45deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+
+	--primary-font1: 'Red Hat Display', sans-serif;
+	--secondary-font1: 'Open Sans', sans-serif;
+
+	--heading-font-family: var(--primary-font1);
+	--heading-text-color: #00224f;
+	--body-font-family: var(--secondary-font1);
+	--body-font-color: #404653;
+	--body-font-size: 1rem;
+	--body-font-weight: 400;
+	--body-font-line-height: 1.8rem;
+
+	--box-shadow: 6px 6px 25px 0px rgba(0, 0, 0, 0.08);;
+}

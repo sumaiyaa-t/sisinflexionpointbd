@@ -1,0 +1,63 @@
+/*========================================*/
+/*-------------- [_Page_Title] -----------*/
+/*========================================*/
+.page-title-section {
+	background-position: center;
+	background-color: #f8f8f8;
+	background-image: url(../images/bg/page-title-bg.jpg);
+	display: flex;
+	align-items: end;
+	min-height: 365px;
+	position: relative;
+	padding: 75px 0;
+	.breadcrumb-area {
+		text-align: center;
+		z-index: 2;
+		position: relative;
+		.page-title {
+			color: #fff;
+			margin-bottom: 10px;
+			letter-spacing: 3px;
+		}
+		.breadcrumbs-link {
+			li {
+				display: inline-block;
+				font-size: 18px;
+				font-weight: 700;
+				color: #fff;
+				a {
+					color: #fff;
+				}
+				&:after {
+					display: inline-block;
+					content: '\f105';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 600;
+					margin-left: 15px;
+					margin-right: 12px;
+					color: #fff;
+				}
+				&.active {
+					color: var(--primary-color3);
+					text-decoration: underline;
+				}
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	&:after {
+		background: linear-gradient(266deg, #24325c, #6c0a30);
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0.1;
+		z-index: 1;
+	}
+}

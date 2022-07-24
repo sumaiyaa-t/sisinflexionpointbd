@@ -1,0 +1,80 @@
+/*========================================*/
+/*-------------- [_Funfact] --------------*/
+/*========================================*/
+.funfact {
+	text-align: center;
+	.funfact-icon {
+		position: relative;
+		display: inline-block;
+		height: 85px;
+		width: 85px;
+		line-height: 85px;
+		margin-bottom: 25px;
+		text-align: center;
+		border-radius: 85% 55% 75% 62% / 60% 88% 40% 75%;
+		background: var(--primary-color2);
+		span {
+			&:before {
+				font-size: 38px;
+				color: #fff;
+			}
+		}
+		&:after {
+			content: "";
+			background: rgba(255, 255, 255, 0.08);
+			height: 100%;
+			width: 100%;
+			left: -12px;
+			top: 15px;
+			position: absolute;
+			z-index: -1;
+			border-radius: 85% 55% 75% 62% / 60% 88% 40% 75%;
+			animation: float-y-axis 3s infinite;
+		}
+	}
+	.funfact-details {
+		.counter {
+			font-size: 48px;
+			margin-bottom: 10px;
+			color: #fff;
+		}
+		.title {
+			color: #fff;
+		}
+	}
+	&.text-left {
+		text-align: left;
+		@media screen and (max-width: 425px){
+			text-align: center;
+		}
+	}
+	&.dark {
+		.funfact-icon {
+			span {
+				&:before {
+					color: #fff;
+				}
+			}
+			&:after {
+				content: "";
+				background: rgba(0, 0, 0, 0.08);
+			}
+		}
+		.funfact-details {
+			.counter {
+				color: var(--heading-text-color);
+			}
+			.title {
+				color: var(--body-font-color);
+				font-weight: 400;
+			}
+		}
+		&.text-left {
+			text-align: left;
+			@media screen and (max-width: 425px){
+				text-align: center;
+			}
+		}
+
+	}
+}

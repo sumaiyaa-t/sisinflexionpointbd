@@ -1,0 +1,61 @@
+/*========================================*/
+/*------------- [_Why_Choose_Us] ---------*/
+/*========================================*/
+.why-choose-us-image-block {
+	position: relative;
+	margin-bottom: -190px;
+	margin-left: 60px;
+	@media screen and (max-width: 1024px){
+		margin-left: 0;
+		width: 575px;
+		margin-bottom: 0;
+	}
+	@media screen and (max-width: 425px){
+		width: 390px;
+	}
+	@media screen and (max-width: 375px){
+		width: 350px;
+	}
+	@media screen and (max-width: 320px){
+		width: 300px;
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		height: 94%;
+		width: 85%;
+		left: 20px;
+		z-index: -1;
+		top: 40px;
+		background: var(--primary-color2);
+		border-radius: 76% 40% 22% 62% / 38% 27% 43% 72%;
+		animation: float-y-axis 3s infinite;
+		opacity: 0.3;
+	}
+}
+
+.why-choose-us-image-block2 {
+	margin-top: -180px;
+	position: relative;
+	img {
+		border-radius: 8px;
+	}
+	.call-us-now {
+		position: absolute;
+		top: 220px;
+		left: -60px;
+		background: var(--primary-color);
+		padding: 30px 40px;
+		border-radius: 8px;
+		&:before {
+			position: inherit;
+			content: "\f18e";
+			font-family: "Flaticon";
+			color: #fff;
+			font-size: 92px;
+			left: 30px;
+			top: 50px;
+			opacity: 0.2;
+		}
+	}
+}

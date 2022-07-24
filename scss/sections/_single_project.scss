@@ -1,0 +1,30 @@
+/*=================================================*/
+/*---------- [_Section_Single_Project] ------------*/
+/*=================================================*/
+.project-info-list {
+	li {
+		color: #677286;
+		display: inherit;
+		margin-bottom: 15px;
+		span {
+			color: #233d63;
+			font-weight: 600;
+			margin-right: 5px;
+			display: block;
+			font-weight: 800;
+			font-family: var(--primary-font1);
+			i {
+				color: var(--primary-color);
+				font-size: 18px;
+				margin-right: 10px;
+				display: none;
+			}
+		}
+		a {
+			color: #677286;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

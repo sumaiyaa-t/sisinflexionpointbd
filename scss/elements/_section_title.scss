@@ -1,0 +1,108 @@
+/*========================================*/
+/*----------- [_Section_Title] -----------*/
+/*========================================*/
+.section-title {
+	margin-bottom: 50px;
+	.sub-title {
+		font-size: 16px;
+	}
+}
+.section-title-left-part {
+	position: relative;
+	padding-left: 30px;
+	&:before {
+		content: "";
+		position: absolute;
+		background: var(--primary-color2);
+		height: 80%;
+		width: 80px;
+		border-radius: 8px;
+		top: 0;
+		left: 0;
+		opacity: 0.2;
+		z-index: -1;
+		animation: heartbeat 1s infinite alternate;
+	}
+	&:after {
+		content: "";
+		height: 78%;
+		width: 75px;
+		position: absolute;
+		background: #fff;
+		border-radius: 8px;
+		top: 10px;
+		left: 16px;
+		opacity: 0.1;
+		z-index: -1;
+		animation: heartbeat 1.5s infinite alternate;
+	}
+	&.title-left-part-primary-color {
+		&:before {
+			background: var(--primary-color);
+			opacity: 1;
+		}
+	}
+}
+
+.title-box-center {
+	position: relative;
+}
+.shadow-text {
+	position: relative;
+	font-size: 152px;
+	opacity: 0.05;
+	left: 0;
+	right: 0;
+	top: 15px;
+	color: #3751ca;
+	font-weight: 800;
+	animation: heartbeat 1s infinite alternate;
+}
+.solid-side-line {
+	position: relative;
+	&:after {
+		content: "";
+		background: var(--primary-color);
+		height: 100%;
+		width: 10px;
+		position: absolute;
+		left: -50px;
+		top: 0;
+	}
+}
+.sub-title-rounded {
+	padding: 5px 25px;
+	background: #5b5fcc;
+	display: inline-block;
+	border-radius: 6px;
+}
+.sub-title {
+	background: rgba(var(--primary-color-rgb),0.15);
+	color: var(--primary-color);
+	display: inline-block;
+	padding: 6px 30px;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	&.sub-title-primary-color2 {
+		background: rgba(var(--primary-color2-rgb),0.3);
+		color: var(--primary-color2);
+	}
+	&.sub-title-primary-color3 {
+		background: rgba(var(--primary-color3-rgb),0.3);
+		color: var(--primary-color3);
+	}
+	&.sub-title-primary-color4 {
+		background: rgba(var(--primary-color4-rgb),0.3);
+		color: var(--primary-color4);
+	}
+	&.sub-title-secondary-color {
+		background: rgba(var(--secondary-color-rgb),0.3);
+		color: var(--secondary-color);
+	}
+	&.sub-title-secondary-color2 {
+		background: rgba(var(--secondary-color2-rgb),0.3);
+		color: var(--secondary-color2);
+	}
+}

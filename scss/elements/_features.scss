@@ -1,0 +1,115 @@
+/*========================================*/
+/*------------- [_Features] --------------*/
+/*========================================*/
+.features-section {
+	counter-reset: my-sec-counter;
+}
+.features-item {
+	background-color: #ffffff;
+	box-shadow: 0 0 20px 3px rgba(0,0, 0, 0.05);
+	margin-bottom: 30px;
+	@include transition(all 500ms ease);
+	border-radius: 10px;
+	.features-inner {
+		position: relative;
+		display: block;
+		border-radius: 10px;
+		overflow: hidden;
+		padding: 40px;
+		z-index: 1;
+		.features-icon {
+			&::before {
+				font-size: 64px;
+				color: var(--primary-color);
+				line-height: 1;
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		.features-title {
+			margin-bottom: 20px;
+		}
+		.features-description {
+			margin-bottom: 0;
+		}
+		.features-shape {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transition-delay: 400ms;
+			@include transition(all 500ms ease);
+			@include transform(translateX(100%));
+			z-index: -1;
+			img {
+				width: 195px;
+				opacity: 0.1;
+			}
+		}
+		.features-count {
+			position: absolute;
+			top: 50px;
+			right: 54px;
+			height: 45px;
+			width: 56px;
+			text-align: center;
+			&:before {
+				position: absolute;
+				top: -20px;
+				left: -20px;
+				right: 0;
+				bottom: 0;
+				color: transparent;
+				opacity: 0.15;
+				font-size: 100px;
+				-webkit-text-stroke: 1px var(--primary-color);
+				line-height: 45px;
+				font-weight: 700;
+				counter-increment: my-sec-counter;
+				content: counters(my-sec-counter,".",decimal-leading-zero);
+				transition: all 200ms linear;
+				transition-delay: 0.1s;
+			}
+		}
+		&:before {
+			position: absolute;
+			top: 0;
+			bottom: 5px;
+			left: 0;
+			right: 0;
+			content: "";
+			background-color: var(--primary-color);
+			border-radius: 10px;
+			@include transition(all 500ms ease);
+			@include transform(translate3d(0px, 100%, 0px));
+			z-index: -1;
+		}
+	}
+	&:hover {
+		transform: translateY(-10px);
+		.features-inner {
+			.features-icon {
+				&::before {
+					color: #fff;
+				}
+			}
+			.features-title {
+				color: #fff;
+			}
+			.features-description {
+				color: #fff;
+			}
+			.features-shape {
+				transform: translateX(0%);
+			}
+			.features-count {
+				&::before {
+					opacity: 0;
+				}
+			}
+			&:before {
+				@include transform(translate3d(0px, 0, 0px));
+				bottom: 0;
+			}
+		}
+	}
+}
