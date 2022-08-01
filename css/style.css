@@ -139,7 +139,8 @@
 }
 
 .logo-image-style {
-  width: 220px;
+  width: 300px;
+  height: 70px !important;
 }
 
 ::-moz-selection {
@@ -3551,7 +3552,7 @@ div[class*="kursor"].kursor--1.kursor--down {
 .page-title-section {
   background-position: center;
   background-color: #f8f8f8;
-  background-image: url(https://via.placeholder.com/1920x420);
+  background-image: url("../images/banner.jpeg");
   display: flex;
   align-items: end;
   min-height: 365px;
@@ -3564,7 +3565,7 @@ div[class*="kursor"].kursor--1.kursor--down {
   position: relative;
 }
 .page-title-section .breadcrumb-area .page-title {
-  color: #fff;
+  color: #0162ca;
   margin-bottom: 10px;
   letter-spacing: 3px;
 }
@@ -3572,10 +3573,10 @@ div[class*="kursor"].kursor--1.kursor--down {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: #0162ca;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li a {
-  color: #fff;
+  color: #0162ca;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li:after {
   display: inline-block;
@@ -3584,10 +3585,10 @@ div[class*="kursor"].kursor--1.kursor--down {
   font-weight: 600;
   margin-left: 15px;
   margin-right: 12px;
-  color: #fff;
+  color: #0162ca;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li.active {
-  color: var(--primary-color3);
+  color: #83b5df;
   text-decoration: underline;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li:last-child:after {
@@ -8832,3 +8833,54 @@ select {
 }
 
 /*# sourceMappingURL=style.css.map */
+blockquote {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+  position: absolute;
+  font-size: 3em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "\201C";
+}
+blockquote:after {
+  position: absolute;
+  /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+  float: right;
+  font-size: 3em;
+  line-height: 1;
+  right: 0;
+  bottom: -0.5em;
+  content: "\201D";
+}
+
+#skills {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#skills td,
+#skills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#skills tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#skills tr:hover {
+  background-color: #ddd;
+}
+
+#skills th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0162ca;
+  color: white;
+}
