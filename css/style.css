@@ -139,10 +139,33 @@
 }
 
 .logo-image-style {
-  width: 250px;
-  height: 68px !important;
+  width: 300px;
+  margin-top: -24px;
 }
-
+@media screen and (max-width: 350px) {
+  .logo-image-style {
+    width: 160px !important;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .logo-image-style {
+    width: 250px !important;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .logo-image-style {
+    width: 270px;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .logo-image-style {
+    width: 300px;
+    margin-top: 0px;
+  }
+}
 ::-moz-selection {
   background: var(--primary-color);
   color: #fff;
@@ -1766,6 +1789,7 @@ div[class*="kursor"].kursor--1.kursor--down {
   background: var(--bg-silver);
   position: relative;
   z-index: 5;
+  height: 110px !important;
 }
 .header-style-two .header-wrapper .header-navigation-area .main-menu {
   margin-right: 20px;
