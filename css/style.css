@@ -6561,14 +6561,22 @@ select {
   overflow: hidden;
   border-radius: 8px 8px 0 0;
 }
-.news-wrapper .news-thumb img {
+.news-wrapper .news-thumb-2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  height: 200px;
+}
+.news-wrapper .news-thumb img,
+.news-wrapper .news-thumb-2 img {
   -moz-transition: all 500ms ease-out 0s;
   -webkit-transition: all 500ms ease-out 0s;
   -ms-transition: all 500ms ease-out 0s;
   -o-transition: all 500ms ease-out 0s;
   transition: all 500ms ease-out 0s;
 }
-.news-wrapper .news-thumb .news-top-meta {
+.news-wrapper .news-thumb .news-top-meta,
+.news-wrapper .news-thumb-2 .news-top-meta {
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -6580,10 +6588,12 @@ select {
   color: #fff;
   border-radius: 8px;
 }
-.news-wrapper .news-thumb .news-top-meta a {
+.news-wrapper .news-thumb .news-top-meta a,
+.news-wrapper .news-thumb-2 .news-top-meta a {
   color: #fff;
 }
-.news-wrapper .news-thumb .news-top-meta i {
+.news-wrapper .news-thumb .news-top-meta i,
+.news-wrapper .news-thumb-2 .news-top-meta i {
   font-size: 15px;
   margin-right: 8px;
   vertical-align: middle;
@@ -6598,15 +6608,18 @@ select {
   font-size: 11px;
   color: var(--secondary-color);
 }
-.news-wrapper .news-thumb .news-top-meta .admin a {
+.news-wrapper .news-thumb .news-top-meta .admin a,
+.news-wrapper .news-thumb-2 .news-top-meta .admin a {
   color: var(--secondary-color);
 }
-.news-wrapper .news-thumb .news-top-meta .comment {
+.news-wrapper .news-thumb .news-top-meta .comment,
+.news-wrapper .news-thumb-2 .news-top-meta .comment {
   background: var(--primary-color);
   padding: 2px 17.9px;
   min-width: 96px;
 }
-.news-wrapper .news-thumb:after {
+.news-wrapper .news-thumb:after,
+.news-wrapper .news-thumb-2:after {
   position: absolute;
   content: "";
   background: rgba(var(--secondary-color-rgb), 0.15);
@@ -6633,14 +6646,16 @@ select {
 .news-wrapper .news-details .news-description .the-content {
   margin-bottom: 20px;
 }
-.news-wrapper:hover .news-thumb img {
+.news-wrapper:hover .news-thumb img,
+.news-wrapper:hover .news-thumb-2 img {
   -moz-transform: scale3d(1.1, 1.1, 1.1);
   -o-transform: scale3d(1.1, 1.1, 1.1);
   -ms-transform: scale3d(1.1, 1.1, 1.1);
   -webkit-transform: scale3d(1.1, 1.1, 1.1);
   transform: scale3d(1.1, 1.1, 1.1);
 }
-.news-wrapper:hover .news-thumb:after {
+.news-wrapper:hover .news-thumb:after,
+.news-wrapper:hover .news-thumb-2:after {
   opacity: 1;
   height: 100%;
 }
