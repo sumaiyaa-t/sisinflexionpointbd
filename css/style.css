@@ -6937,6 +6937,8 @@ select {
   overflow: hidden;
 }
 .team-block .team-upper-part img {
+  width:auto;
+  height:350px;
   -moz-transition: all 0.4s ease-out 0s;
   -webkit-transition: all 0.4s ease-out 0s;
   -ms-transition: all 0.4s ease-out 0s;
@@ -9103,4 +9105,7 @@ a.lightzoom {
     transform: scale(0);
     -webkit-transform: scale(0);
   }
+}
+footer p,.project-details-content, .order-list, .team-member-info p, .about-section p, .service-detail-text p{
+  text-align: justify;
 }
